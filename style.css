@@ -1,4 +1,4 @@
-/* Minimal academic single-column site — Abhishek Kumar */
+/* Minimal academic single-column site : Abhishek Kumar */
 :root{
   --ink:#1a1a1a; --muted:#6b6b6b; --link:#1f6feb; --rule:#e6e6e6; --accent:#1F3B73;
   --max:760px;
@@ -55,12 +55,15 @@ h2{
 .summary{font-size:.92rem; color:#333; margin-bottom:5px}
 .pub-links{font-size:.9rem}
 
-/* experience */
-.row{display:flex; justify-content:space-between; gap:16px; padding:7px 0; border-bottom:1px solid var(--rule)}
-.row:last-child{border-bottom:none}
-.role{flex:1}
-.when{text-align:right; color:var(--muted); font-size:.92rem; white-space:nowrap}
-.sub{color:var(--muted); font-size:.9rem}
+/* experience / education timeline */
+.timeline{position:relative; margin:2px 0 2px 6px; padding-left:26px; border-left:2px solid var(--rule)}
+.tl-item{position:relative; padding:0 0 16px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:""; position:absolute; left:-33px; top:4px; width:11px; height:11px;
+  border-radius:50%; background:#fff; border:2px solid var(--accent)}
+.tl-date{font-size:.85rem; color:var(--muted); margin-bottom:1px}
+.tl-content{line-height:1.4}
+.sub{color:var(--muted); font-size:.92rem}
 
 /* lists */
 ul.plain{margin:0; padding-left:1.1em}
@@ -74,6 +77,4 @@ footer{margin-top:40px; padding-top:14px; border-top:1px solid var(--rule);
   main{padding:32px 18px}
   .pub{flex-direction:column; gap:8px}
   .pub > img{width:100%; min-width:0; height:auto; max-height:200px}
-  .row{flex-direction:column; gap:2px}
-  .when{text-align:left}
 }
