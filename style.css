@@ -1,0 +1,79 @@
+/* Minimal academic single-column site — Abhishek Kumar */
+:root{
+  --ink:#1a1a1a; --muted:#6b6b6b; --link:#1f6feb; --rule:#e6e6e6; --accent:#1F3B73;
+  --max:760px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); background:#fff;
+  font-family:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.6;
+}
+main{max-width:var(--max); margin:0 auto; padding:48px 22px 64px}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header */
+.intro{text-align:center; margin-bottom:14px}
+.avatar{
+  width:150px; height:150px; border-radius:50%; object-fit:cover;
+  border:1px solid var(--rule); margin-bottom:14px;
+}
+.intro h1{
+  font-family:"Newsreader",Georgia,serif; font-weight:600;
+  font-size:2.15rem; margin:0 0 4px; letter-spacing:.2px;
+}
+.tagline{margin:0 0 12px; color:var(--muted); font-size:1.05rem}
+.links{display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:center; font-size:.98rem}
+.links a{color:var(--accent); font-weight:700}
+
+/* bio */
+.bio{margin:22px 0 8px}
+.bio p{margin:0 0 12px}
+.interests{font-size:.95rem; color:#333}
+
+/* sections */
+section{margin-top:30px}
+h2{
+  font-family:"Newsreader",Georgia,serif; font-weight:600; font-size:1.4rem;
+  color:var(--accent); margin:0 0 10px; padding-bottom:5px; border-bottom:2px solid var(--rule);
+}
+.note{font-size:.86rem; color:var(--muted); margin:0 0 16px}
+.eq{color:var(--muted)}
+
+/* publications */
+.pub{display:flex; gap:18px; margin-bottom:20px; align-items:flex-start}
+.pub > img{
+  width:180px; min-width:180px; height:118px; object-fit:cover;
+  border:1px solid var(--rule); border-radius:4px; background:#fafafa;
+}
+.pub-title{font-weight:700; display:block; margin-bottom:2px; line-height:1.35}
+.authors{font-size:.92rem; margin-bottom:1px}
+.authors u{text-decoration-thickness:1px; text-underline-offset:2px}
+.venue{font-style:italic; color:var(--muted); font-size:.9rem; margin-bottom:5px}
+.summary{font-size:.92rem; color:#333; margin-bottom:5px}
+.pub-links{font-size:.9rem}
+
+/* experience */
+.row{display:flex; justify-content:space-between; gap:16px; padding:7px 0; border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:none}
+.role{flex:1}
+.when{text-align:right; color:var(--muted); font-size:.92rem; white-space:nowrap}
+.sub{color:var(--muted); font-size:.9rem}
+
+/* lists */
+ul.plain{margin:0; padding-left:1.1em}
+ul.plain li{margin-bottom:6px}
+
+footer{margin-top:40px; padding-top:14px; border-top:1px solid var(--rule);
+  font-size:.82rem; color:var(--muted); text-align:center}
+
+/* responsive */
+@media (max-width:560px){
+  main{padding:32px 18px}
+  .pub{flex-direction:column; gap:8px}
+  .pub > img{width:100%; min-width:0; height:auto; max-height:200px}
+  .row{flex-direction:column; gap:2px}
+  .when{text-align:left}
+}
